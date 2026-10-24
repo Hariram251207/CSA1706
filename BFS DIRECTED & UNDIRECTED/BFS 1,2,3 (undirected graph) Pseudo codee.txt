@@ -1,0 +1,39 @@
+BFS 1,2,3 (undirected graph)
+
+ALGORITHM BFS(Graph, Start)
+
+1.  Create an empty queue Q.
+2.  Create an empty set Visited.
+3.  Mark Start as visited.
+4.  Insert Start into Q.
+
+5.  WHILE Q is not empty DO
+6.      Node = Remove the front element from Q.
+7.      Print Node.
+
+8.      FOR each Neighbor of Node DO
+9.          IF Neighbor is not in Visited THEN
+10.             Mark Neighbor as visited.
+11.             Insert Neighbor into Q.
+12.         END IF
+13.     END FOR
+14. END WHILE
+
+END ALGORITHM
+
+BEGIN
+
+1. Read the number of vertices N.
+2. Read the number of edges E.
+3. Create an empty adjacency list Graph.
+
+4. FOR each edge from 1 to E DO
+       Read vertices U and V.
+       Add V to the adjacency list of U.
+       Add U to the adjacency list of V.
+   END FOR
+
+5. Read the starting vertex Start.
+6. Call BFS(Graph, Start).
+
+END
